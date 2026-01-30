@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <title>INJECT TITLE</title> -->
+  <title><%title%></title>
   <link rel="stylesheet" href="/character.css">
 
 </head>
 <body>
 
-  <h1><%= character.name %></h1>
+  <h1><%= title%></h1>
 
   <div class="card">
     <div class="row">
       <div class="label">Type</div>
-      <!-- <div class="value">INJECT DATA</div> -->
+      <div class="value"><%=character.type%></div>
     </div>
 
     <div class="row">
       <div class="label">Trait</div>
-      <!-- <div class="value">INJECT DATA</div> -->
+      <div class="value"><%=character.trait%></div>
     </div>
 
+    <div class="row">
+      <div class="label">Weapon</div>
+      <div class="value"><%=character.weapon%></div>
+    </div>
+    <div class="description"><%=title%> is a <%= character.trait %> <%=character.type %>. <%= title %> uses a <%=character.weapon%></div>
     <a class="button" href="/">← Back</a>
   </div>
 
